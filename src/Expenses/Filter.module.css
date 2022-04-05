@@ -1,0 +1,19 @@
+.filterContainer > *  {
+    display: inline-block;
+}
+
+.filterContainer > p {
+    margin-right: 2em;
+    margin-bottom: 2em;
+}
+
+.filterContainer select {
+    background-color: rgb(12, 12, 46);
+    color: white;
+    border: none;
+    font-size: 1em;
+    padding: 0.3em 0.5em;
+}
+
+
+

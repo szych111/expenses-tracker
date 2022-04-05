@@ -1,0 +1,24 @@
+.card {
+    width: min(90vw, 600px);
+    margin: 2vmin auto 5vmin;
+    padding: 2vmax;
+    text-align: center;
+    background-color: rgb(18, 58, 45);
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgb(117, 116, 116);
+}
+
+.card, input, button, select {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    color: white;
+}
+
+input, button, select {
+    border-radius: 4px;
+}
+
+button, select {
+    display: inline-block;
+}

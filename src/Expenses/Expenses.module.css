@@ -1,0 +1,22 @@
+h2 {
+    text-transform: uppercase;
+}
+
+.expense {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 2em 0.5em;
+}
+
+.expense p {
+    border-bottom: dotted 1px;
+    width: 100%;
+}
+
+.name {
+    text-align: left;
+}
+
+.amount, .date {
+    text-align: right;
+}
