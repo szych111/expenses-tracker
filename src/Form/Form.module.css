@@ -4,7 +4,7 @@
     margin: 0 auto;
 }
 
-input, button {
+input {
    margin-bottom: 2em;
    background-color: rgb(18, 58, 45);
    border: none;
@@ -20,18 +20,6 @@ input {
     margin-inline: auto;
 }
 
-button {
-    background-color: rgb(12, 12, 46);
-    cursor: pointer;
-    border-radius: 5px;
-    padding: 0.75em 3em;
-    text-transform: uppercase;
-    margin-inline-start: 1em;
-}
-
-button:hover {
-    background-color: rgb(19, 19, 48);
-}
 
 .flex {
     display: flex;

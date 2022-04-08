@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
-import { Card } from "../Card";
+import { Card } from "../UI/Card";
+import { Button } from "../UI/Button";
 import styles from "./Form.module.css";
 
 export const Form = (props) => {
@@ -46,7 +47,7 @@ export const Form = (props) => {
 
   return (
     <Card>
-      {!isEditing && <button onClick={startEditing}>Add new expense</button>}
+      {!isEditing && <Button onClick={startEditing}>Add new expense</Button>}
       {isEditing && (
         <form className={styles.form} onSubmit={submitHandler}>
           <input
@@ -69,10 +70,8 @@ export const Form = (props) => {
             value={enteredDate}
             onChange={dateInputHandler}
           />
-          <button type="submit">Submit</button>
-          <button type="button" onClick={stopEditing}>
-            Cancel
-          </button>
+          <Button type="submit">Submit</Button>
+          <Button onClick={stopEditing}>Cancel</Button>
         </form>
       )}
     </Card>

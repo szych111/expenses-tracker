@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { Filter } from "./Filter";
-import { Card } from "../Card";
+import { Card } from "../UI/Card";
 import styles from "./Expenses.module.css";
 import { ExpensesChart } from "./ExpensesChart";
 
@@ -10,13 +10,11 @@ export const Expenses = (props) => {
 
   const filterChangeHandler = (selectedYear) => {
     setSelectedYear(selectedYear);
-    console.log(selectedYear);
   };
 
   const filteredExpenses = props.items.filter((i) => {
     return new Date(i.date).getFullYear().toString() === selectedYear;
   });
-  console.log(filteredExpenses);
 
   return (
     <Card>

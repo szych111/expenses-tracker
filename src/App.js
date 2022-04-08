@@ -2,8 +2,10 @@ import React, { useState } from "react";
 
 import { Form } from "./Form/Form";
 import { Expenses } from "./Expenses/Expenses";
+import { AddUser } from "./Users/AddUser";
 
 import "./App.css";
+import { UsersList } from "./Users/UsersList";
 
 const DUMMY_EXPENSES = [
   { name: "wine", amount: 4.3, date: "2019-04-15" },
@@ -21,6 +23,7 @@ const DUMMY_EXPENSES = [
 
 export default function App() {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+  const [usersList, setUsersList] = useState([]);
 
   const onFormSubmit = (data) => {
     setExpenses((prevExpenses) => {
@@ -29,8 +32,19 @@ export default function App() {
     console.log(expenses);
   };
 
+  const addUserHandler = (userName, userEmail) => {
+    setUsersList((prevUsersList) => {
+      return [
+        ...prevUsersList,
+        { name: userName, email: userEmail, id: Math.random().toString() },
+      ];
+    });
+  };
+
   return (
     <div>
+      <AddUser onAddUser={addUserHandler} />
+      <UsersList users={usersList} />
       <Form onFormSubmit={onFormSubmit} />
       <Expenses items={expenses} />
     </div>
